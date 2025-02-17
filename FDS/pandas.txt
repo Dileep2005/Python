@@ -1,0 +1,53 @@
+PANDAS:- Pandas is a python module that makes data science easy and efficitive
+Data_frames :- Dataframe is a main object in pandas .It is used to represent data with rows and colounms (tabular or excel spreadsheet like data)
+
+HOW TO READ DATA WITH PANDAS:
+import pandas as pa
+weather_data = {
+    "day": ["1/1/2017", "1/2/2017", "1/3/2017", "1/4/2017", "1/5/2017", "1/6/2017"],
+    "event": ["Rain", "Sunny", "Snow", "Snow", "Rain", "Sunny"],
+    "temperature": [32,35,28,24,32,31],
+    "windspeed": [6,7,2,7,4,2]
+}
+#How TO PRINT THE DATA
+df = pa.DataFrame(weather_data)
+print(df)
+
+#HOW TO PRINT THE NUMBER OF ROWS AND NUMBER OF COLUMNS IN THE DATA :-
+rows, columns = df.shape
+print("\nNo of rows in the data :",rows)
+print("No of columns in the data :",columns)
+
+#HOW TO PRINT THE NUMBER OF ROWS:-
+df.head(NUMBER OF ROWS)
+print("Print the number of rows :",df.head(2)) #prints two rows in the given data
+
+#HOW TO PRINT LAST ONE ROW OR PRINT FROM LAST ROWS:-
+tail:- prints the last data
+print("Print last 5 rows :",df.tail(5))
+
+#WE CAN ACCESS THE DATA BASED UPON THE INDEXING AND SLICING :-
+print(df[2:])
+
+#PRINT THE COLUNMS IN THE DATA:
+print(df.columns)
+
+#PRINT THE SEPCIFIED COLUNM DATA:
+print(df.day)   or print(df['event'])
+
+#PRINT COLUMNS WHICH WE LIKE :-
+print(df[['event','day']])
+
+                                                        #PERFROM OPERATIONS ON THE DATA SET 
+#TO FIND THE MININUM DATA IN THE DATA_SET :-
+print(df['temperature'].min()]
+or max or mean :- avg or std() :- standard deviatation.
+# HELPS TO PERFORM THE STASTICAL OPEARTIONS ON THE DATA.
+print(df.describe())
+
+#PRINT THE DATA WHERE MY TEMPERATURE IS >=32
+print(df[df.temperature>=32])
+
+#PRINT MY ENTIRE DATA WHICH IS HAVING THE MAXIMUM TEMPERATURE:-
+print(df[df.temperature==df.tempearure.max()]
+or print([df.[df.temperature==df['temperature'].max())])
